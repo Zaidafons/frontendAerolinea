@@ -1,0 +1,115 @@
+<c-col xs="12">
+  <c-card class="mb-4">
+    <c-card-body>
+      <form cForm>
+        <div class="mb-3">
+          <label cLabel for="Pasajero">Pasajero</label>
+          <input cFormControl
+                 id="Pasajero"
+                 placeholder="Ingresa el Nombre completo"
+                 type="text"
+                 name="Pasajero"
+                 [(ngModel)]="pasajeModelo.Pasajero"
+          />
+        </div>
+        <div class="mb-3">
+          <label cLabel for="Clase">Clase</label><br>
+          <select aria-label="Default select example" cSelect id="Clase" name="Clase" [(ngModel)]="pasajeModelo.Clase">
+            <option>Clase de vuelo</option>
+            <option value="Ejecutivo">Ejecutivo</option>
+            <option value="Premiun">Premiun</option>
+            <option value="Economico">Economico</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label cLabel for="Asiento">Asiento</label>
+          <input cFormControl
+                 id="Asiento"
+                 placeholder="Ingresa el Asiento Asignado"
+                 type="text"
+                 name="Asiento"
+                 [(ngModel)]="pasajeModelo.Asiento"
+          />
+        </div>
+        <div class="mb-3">
+          <label cLabel for="Origen">Origen</label>
+          <input cFormControl
+                 id="Origen"
+                 placeholder="Ingresa el Origen de Vuelo"
+                 type="text"
+                 name="Origen"
+                 [(ngModel)]="pasajeModelo.Origen"
+          />
+        </div>
+      
+        <div class="mb-3">
+          <label cLabel for="Destino">Destino</label>
+          <input cFormControl
+                 id="Destino"
+                 placeholder="Ingresa el Destino de Vuelo"
+                 type="text"
+                 name="Destino"
+                 [(ngModel)]="pasajeModelo.Destino"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label cLabel for="Precio">Precio</label>
+          <input cFormControl
+                 id="Precio"
+                 placeholder="Ingresa el Precio de Boleto"
+                 type="number"
+                 name="Precio"
+                 [(ngModel)]="pasajeModelo.Precio"
+          />
+        </div>
+        <div class="mb-3">
+          <label cLabel for="Fecha_partida">Fecha de Partida</label>
+          <input cFormControl
+                 id="Fecha_partida"
+                 placeholder="Ingresa la Fecha"
+                 type="datetime-local"
+                 name="Fecha_partida"
+                 [value]="convertirFechaParaInput(pasajeModelo.Fecha_partida)" 
+                 [(ngModel)]="pasajeModelo.Fecha_partida"
+          />
+        </div>
+        <div class="mb-3">
+          <label cLabel for="Fecha_llegada">Fecha de Llegada</label>
+          <input cFormControl
+                 id="Fecha_llegada"
+                 placeholder="Ingresa la Fecha"
+                 type="datetime-local"
+                 name="Fecha_llegada"
+                 [value]="convertirFechaParaInput(pasajeModelo.Fecha_llegada)" 
+                 [(ngModel)]="pasajeModelo.Fecha_llegada"
+          />
+        </div>
+        <div class="mb-3">
+          <label cLabel for="vuelo">Vuelo</label><br>
+          <select aria-label="Default select example" cSelect id="vuelo" name="vuelo" [(ngModel)]="pasajeModelo.vuelo">
+            <option>Vuelo</option>
+            <option value="664ed21280aed8e91a492f89">350</option>
+            <option value="664f9f1da4f8c3b2201ecc5e">2002</option>
+            <option value="664f9f43a4f8c3b2201ecc60">456</option>
+          </select>
+          
+        </div>
+        <div class="mb-3">
+          <label cLabel for="usuario">Usuario</label><br>
+          <select aria-label="Default select example" cSelect id="usuario" name="usuario" [(ngModel)]="pasajeModelo.usuario">
+            <option>Elije el Usuario</option>
+            <option value="664e68fcf1fb7b8735805c8b">Luis</option>
+            <option value="664e71f794a6130cd631ea75">Maria</option>
+            <option value="664e696c0bcc4303ff864922">Zaida</option>
+          </select>
+        </div>
+
+       
+        <button (click)="guardarPasaje()" cButton class="me-1" color="primary" type="submit">
+          Registrar
+        </button>
+      </form>
+    </c-card-body>
+  </c-card>
+</c-col>

@@ -18,6 +18,13 @@ export const routes: Routes = [
         path: 'dashboard',
         loadChildren: () => import('./views/dashboard/routes').then((m) => m.routes)
       },
+      
+      {
+        path: 'aerolinea',
+        loadChildren: () => import('./views/aerolineas/routes').then((m) => m.routes)
+      },
+      
+
       {
         path: 'theme',
         loadChildren: () => import('./views/theme/routes').then((m) => m.routes)
@@ -72,7 +79,7 @@ export const routes: Routes = [
   },
   {
     path: 'login',
-    loadComponent: () => import('./views/pages/login/login.component').then(m => m.LoginComponent),
+    loadComponent: () => import('./views/aerolineas/login/login.component').then(m => m.LoginComponent),
     data: {
       title: 'Login Page'
     }

@@ -17,7 +17,7 @@ export const routes: Routes = [
   },
   {
     path: 'login',
-    loadComponent: () => import('./login/login.component').then(m => m.LoginComponent),
+    loadComponent: () => import('../aerolineas/login/login.component').then(m => m.LoginComponent),
     data: {
       title: 'Login Page'
     }
